@@ -8,7 +8,7 @@
 		<version>2.5.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.wixis360</groupId>
+	<groupId>com.cresoft</groupId>
 	<artifactId>cresoft-vue</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>cresoft-vue</name>
