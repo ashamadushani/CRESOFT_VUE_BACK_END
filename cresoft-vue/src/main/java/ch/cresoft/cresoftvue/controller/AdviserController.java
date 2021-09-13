@@ -1,7 +1,7 @@
-package com.cresoft.cresoftvue.controller;
+package ch.cresoft.cresoftvue.controller;
 
-import com.cresoft.cresoftvue.dto.CustomerDto;
-import com.cresoft.cresoftvue.service.CustomerService;
+import ch.cresoft.cresoftvue.dto.AdviserDto;
+import ch.cresoft.cresoftvue.service.AdviserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -13,17 +13,17 @@ import java.util.List;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
-@RequestMapping("/api/v1/customer")
-public class CustomerController {
+@RequestMapping("/api/v1/adviser")
+public class AdviserController {
     @Autowired
-    private CustomerService customerService;
+    private AdviserService adviserService;
 
     @GetMapping
-    public ResponseEntity<List<CustomerDto>> read() {
-        List<CustomerDto> customerDtoList = customerService.read();
+    public ResponseEntity<List<AdviserDto>> read() {
+        List<AdviserDto> adviserDtoList = adviserService.findAll();
 
-        if(!customerDtoList.isEmpty()){
-            return ResponseEntity.ok(customerDtoList);
+        if(!adviserDtoList.isEmpty()){
+            return ResponseEntity.ok(adviserDtoList);
         }
 
         return ResponseEntity.noContent().build();

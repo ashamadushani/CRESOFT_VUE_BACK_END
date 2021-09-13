@@ -1,16 +1,6 @@
 spring:
   datasource:
-    url: "jdbc:mysql://localhost:8889/cresoft_vue?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&serverTimezone=UTC&useLegacyDatetimeCode=false"
-    username: root
-    password: root
-    platform: mysql
-    initialization-mode: always
-    continue-on-error: true
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-  data:
-    web:
-      pageable:
-        one-indexed-parameters: true # Whether to expose and assume 1-based page number indexes.
+    url: jdbc:oracle:thin:@10.10.10.123:1521:CRE4
+    username: cci
+    password: temos
+    driver-class-name: oracle.jdbc.driver.OracleDriver
